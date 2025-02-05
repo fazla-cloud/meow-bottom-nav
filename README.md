@@ -12,7 +12,7 @@ dependencyResolutionManagement {
 		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
 		repositories {
 			mavenCentral()
-			maven { url 'https://jitpack.io' } // add this line
+			maven { url 'https://jitpack.io' }    // add this line
 		}
 	}
 ```
@@ -22,7 +22,7 @@ dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
-        maven { url = uri("https://jitpack.io") } // add this line
+        maven { url = uri("https://jitpack.io") }  // add this line
         mavenCentral()
     }
 }
