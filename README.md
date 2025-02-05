@@ -5,8 +5,10 @@ A simple & curved & material bottom navigation for Android written in **Kotlin**
 
 ## Install
 
-Update your `build.gradle` (project path) or `Settings.gradle.kts` (Project Settings) like below :
+### Gradle Setup
 
+Update your `build.gradle` (project path) or `Settings.gradle.kts` (Project Settings) like below :
+**For Groovy:**
 ```groovy
 dependencyResolutionManagement {
 		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
@@ -17,6 +19,7 @@ dependencyResolutionManagement {
 	}
 ```
 
+**For Kotlin:**
 ```kotlin
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
@@ -30,13 +33,14 @@ dependencyResolutionManagement {
 
 
 Update your `build.gradle` (module path) like below :
-
+**For Groovy:**
 ```groovy
 dependencies {
   implementation 'com.github.fazla-cloud:meow-bottom-nav:v1.0.0'
 }
 ```
 
+**For Kotlin:**
 ```kotlin
 dependencies {
   implementation ("com.github.fazla-cloud:meow-bottom-nav:v1.0.0")
@@ -45,12 +49,14 @@ dependencies {
 
 Use androidx by adding this lines to `gradle.properties`. If you want more info, just google **AndroidX**.
 
+**Properties:**
 ```properties
 android.useAndroidX=true
 android.enableJetifier=true
 ```
 ## Example
 
+**Android:**
 ```android
 android {
     namespace "com.demo.paka"
@@ -93,6 +99,7 @@ android {
 
 Add Meow Bottom Navigation in you layout xml file.
 
+**XML:**
 ```xml
 <com.nafis.bottomnavigation.NafisBottomNavigation
     android:layout_width="match_parent"
@@ -101,6 +108,7 @@ Add Meow Bottom Navigation in you layout xml file.
 
 Add menu items in code.
 
+**Kotlin:**
 ```kotlin
 val bottomNavigation = findView(R.id.bottomNavigation)
 bottomNavigation.add(NafisBottomNavigation.Model(1, R.drawable.ic_home))
@@ -112,6 +120,7 @@ Add vectorDrawables.useSupportLibrary = true to your build.gradle inside `defaul
 
 ## Customization
 
+**XML:**
 ```xml
 <com.nafis.bottomnavigation.NafisBottomNavigation
     android:layout_width="match_parent"
@@ -135,6 +144,7 @@ Add vectorDrawables.useSupportLibrary = true to your build.gradle inside `defaul
 
 Use `setOnShowListener()` function to access when a cell has been shown.
 
+**Kotlin:**
 ```kotlin
 bottomNavigation.setOnShowListener {
     // YOUR CODES
@@ -143,6 +153,8 @@ bottomNavigation.setOnShowListener {
 
 Use `setOnClickMenuListener()` function to access when a cell has been clicked.
 
+
+**Kotlin:**
 ```kotlin     
 bottomNavigation.setOnClickMenuListener {
     // YOUR CODES
@@ -151,6 +163,7 @@ bottomNavigation.setOnClickMenuListener {
 
 If you are Java Developer, use this examples :
 
+**Java:**
 ```java
 bottomNavigation.setOnClickMenuListener(new Function1<NafisBottomNavigation.Model, Unit>() {
             @Override
@@ -173,22 +186,26 @@ bottomNavigation.setOnShowListener(new Function1<NafisBottomNavigation.Model, Un
 
 Set counter badge on a specific cell by `setCount(Int,String)`.
 
+**For Kotlin:**
 ```kotlin
 bottomNavigation.setCount(CELL_ID, YOUR_STRING)
 ```
 
 Clear counter badge on a specific cell by `clearCount(Int)`.
 
+**For Kotlin:**
 ```kotlin
 bottomNavigation.clearCount(CELL_ID)
 ```
 
 Clear all counter badges on a specific cell by `clearCount(Int)`.
 
+**Kotlin:**
 ```kotlin
 bottomNavigation.clearAllCounts(TAB_ID)
 ```
 
+**Java full Example:**
 ```java Full example
 
 public class MainActivity extends AppCompatActivity {
@@ -311,6 +328,7 @@ public class MainActivity extends AppCompatActivity {
 
 Use this function :
 
+**Kotlin:**
 ```kotlin
 bottomNavigation.show(CELL_ID)
 ```
