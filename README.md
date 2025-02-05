@@ -1,33 +1,45 @@
-# Nafis Bottom Navigation Updated
-A simple & curved & material bottom navigation for Android written in **Kotlin** with ♥ .
+# Meow Bottom Nav
+A simple & curved & material bottom navigation for Android written in **Kotlin** | **Java** with ♥ .
 
 ![](https://github.com/shetmobile/MeowBottomNavigation/raw/master/resources/Preview.gif)
 
-## Download
+## Install
 
-Update your `build.gradle` (project path) like below :
+Update your `build.gradle` (project path) or `Settings.gradle.kts` (Project Settings) like below :
 
 ```groovy
 dependencyResolutionManagement {
 		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
 		repositories {
 			mavenCentral()
-			maven { url 'https://jitpack.io' }
+			maven { url 'https://jitpack.io' } // add this line
 		}
 	}
 ```
+
+```kotlin
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        maven { url = uri("https://jitpack.io") } // add this line
+        mavenCentral()
+    }
+}
+```
+
 
 Update your `build.gradle` (module path) like below :
 
 ```groovy
 dependencies {
-  implementation 'com.github.Foysalofficial:NafisBottomNav:5.0'
+  implementation 'com.github.fazla-cloud:meow-bottom-nav:v1.0.0'
 }
 ```
 
-```groovy
+```kotlin
 dependencies {
-  implementation ("com.github.Foysalofficial:NafisBottomNav:5.0")
+  implementation ("com.github.fazla-cloud:meow-bottom-nav:v1.0.0")
 }
 ```
 
@@ -37,14 +49,7 @@ Use androidx by adding this lines to `gradle.properties`. If you want more info,
 android.useAndroidX=true
 android.enableJetifier=true
 ```
-
-If you want to add this library to a JAVA Project, you must add kotlin library to `build.gradle`.
-
-```groovy
-dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.61"
-}
-```
+## Example
 
 ```android
 android {
@@ -83,17 +88,6 @@ android {
 }
 
 ```
-
-## 😍 Donate & Support
-
-We are developing this framework in open source community without financial planning but the maintenance & preparing updates at periodic times is Time-consuming.
-If you like this project and you want to give us peace of mind, you can support us by clicking this button :
-
-<p>
-<a href="https://foysalofficial.com">
-<img width="20%" src="https://raw.githubusercontent.com/oneHamidreza/Meow-Framework-MVVM/master/Resources/img_support.png"/>
-</a>
-</p>
 
 ## Usage
 
